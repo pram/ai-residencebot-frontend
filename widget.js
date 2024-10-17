@@ -120,6 +120,7 @@
       max-width: 75%;
       word-wrap: break-word;
       font-size: 0.95rem;
+      white-space: pre-wrap; /* Ensures newlines are respected */
     }
     .chatbox .outgoing {
       justify-content: flex-end;
@@ -132,6 +133,7 @@
       max-width: 75%;
       word-wrap: break-word;
       font-size: 0.95rem;
+      white-space: pre-wrap; /* Ensures newlines are respected */
     }
     .chatbox .outgoing p.error {
       background: #f8d7da;
@@ -223,7 +225,7 @@
     let userMessage = null; // Variable to store user's message
     const inputInitHeight = chatInput.scrollHeight;
 
-    const API_URL = "http://145.40.189.24:8080/api/chat";
+    const API_URL = "http://localhost:8080/api/chat";
 
     const createChatLi = (message, className) => {
         const chatLi = document.createElement("li");
